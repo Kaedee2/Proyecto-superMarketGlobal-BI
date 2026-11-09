@@ -13,7 +13,7 @@ En este informe resumimos lo que hicimos en el avance 3 y decimos donde esta cad
 
 **Con que datos trabajamos ahora.** Ventas con descuento de US, LATAM, EU y APAC, de enero de 2011 a diciembre de 2014.
 
-El 3 de noviembre la profesora nos indico redondear los descuentos con tres decimales y juntar las parejas de envios. Despues, en la revision del avance 2, nos pidio dejar solo las reglas de negocio, quitar las 3 parejas con cliente distinto en lugar de dejarlas pendientes, trabajar solo con ventas que tienen descuento y tomar el costo de envio como un pago del cliente. Tambien nos pidio agregar media, mediana y moda para responder algo concreto.. La tabla completa de cambios esta en la seccion 3.1 del notebook.
+El 3 de noviembre la profesora nos indico redondear los descuentos con tres decimales y juntar las parejas de envios. Despues, en la revision del avance 2, nos pidio dejar solo las reglas de negocio, quitar las 3 parejas con cliente distinto en lugar de dejarlas pendientes, trabajar solo con ventas que tienen descuento y tomar el costo de envio como un pago del cliente. Tambien nos pidio agregar media, mediana y moda para responder algo concreto. La tabla completa de cambios esta en la seccion 3.1 del notebook.
 
 ## 2. Fuentes e integracion
 
@@ -82,6 +82,6 @@ Tambien comparamos con los descuentos como venian. Con la regla R1 el margen de 
 
 ## 7. Limitaciones y siguientes pasos
 
-Lo que concluimos vale para el 37 % de las filas del Excel, que son las ventas con descuento de cuatro mercados. No comparamos contra ventas sin descuento, aunque esas ventas estan guardadas en los excluidos. Por la regla R6 tomamos el envio como un pago del cliente, y comprobamos que la Utilidad no lo trae restado. Si lo pagara la tienda, el margen bajaria casi 11 puntos y la perdida empezaria desde 11 a 20 %. Tampoco sabemos en que moneda estan los montos., sin restarle el envio, pero el archivo no dice si esa utilidad ya lo trae restado ni en que moneda estan los montos. Las reglas R1 y R3 suponen un error de captura y envios en dos partes. Algunos grupos tienen pocas ventas, y que el descuento y el margen se muevan juntos no prueba que uno cause el otro.
+Lo que concluimos vale para el 37 % de las filas del Excel, que son las ventas con descuento de cuatro mercados. No comparamos contra ventas sin descuento, aunque esas ventas estan guardadas en los excluidos. Por la regla R6 tomamos el envio como un pago del cliente, y comprobamos que la Utilidad no lo trae restado. Si lo pagara la tienda, el margen bajaria casi 11 puntos y la perdida empezaria desde 11 a 20 %. Tampoco sabemos en que moneda estan los montos. Las reglas R1 y R3 suponen un error de captura y envios en dos partes. Algunos grupos tienen pocas ventas, y que el descuento y el margen se muevan juntos no prueba que uno cause el otro.
 
 Lo que sigue es cargar `ventas_preparadas.csv` en PostgreSQL (unidad 3), sacar el limite por subcategoria y mercado juntando los grupos chicos, y revisar como cambia todo mes a mes con la columna *Mes*.
